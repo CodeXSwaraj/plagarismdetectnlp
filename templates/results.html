@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Detection Results</title>
+</head>
+<body>
+    <h1>Plagiarism Detection Results</h1>
+    <ul>
+        {% for result in results %}
+            <li>Document ID: {{ result[0] }}, Similarity: {{ result[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>
