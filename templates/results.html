@@ -2,12 +2,24 @@
 <html>
 <head>
     <title>Plagiarism Detection Results</title>
+    <style>
+        .similar-text {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Plagiarism Detection Results</h1>
     <ul>
         {% for result in results %}
-            <li>Document ID: {{ result[0] }}, Similarity: {{ result[1] }}</li>
+            <li>
+                Document ID: {{ result[0] }}<br>
+                Similarity Score: {{ result[1] }}<br>
+                <p>Similar Text:
+                    <span class="similar-text">{{ result[2] }}</span>
+                </p>
+            </li>
         {% endfor %}
     </ul>
     <a href="/">Go Back</a>
